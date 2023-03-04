@@ -1,0 +1,231 @@
+﻿<Window x:Class="Generic_List.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Generic_List"
+        mc:Ignorable="d"
+        Title="Window2" Height="{x:Static SystemParameters.PrimaryScreenHeight}" Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+            <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+            <Setter Property="TextBlock.Width" Value="200"></Setter>
+            <Setter Property="TextBlock.Height" Value="35"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid >
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+                <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+                <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+                <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                <Setter Property="TextBlock.Width" Value="350"></Setter>
+                <Setter Property="TextBlock.Height" Value="30"></Setter>
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+                <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+                <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+            </Style>
+        </Grid.Resources>
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                        <GradientStop Color="#764fba" Offset="0.1"></GradientStop>
+                        <GradientStop Color="#5486cb"  Offset="1.0"></GradientStop>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+
+                <Grid   Width="550" Height="700" >
+                    <Grid.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.3"></SolidColorBrush>
+                    </Grid.Background>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                        <RowDefinition  Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="REGISTRATION FORM" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Margin="0,30,0,0" >
+                        <Label.Style>
+                            <Style>
+                                <Setter Property="TextBlock.FontSize" Value="30"></Setter>
+                                <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+                                <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                                <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    <StackPanel Grid.Row="1"  Grid.Column="0" Grid.ColumnSpan="2" Margin="94,30,30,0" HorizontalAlignment="Left"  >
+                        <Label Content="NAME" Margin="0,0,0,0"  ></Label>
+                        <TextBox x:Name="txtFanme" VerticalContentAlignment="Bottom" Padding="5,0,0,0">
+
+                        </TextBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                        <Label Content="Age" Margin="0,0,0,0" HorizontalAlignment="Left" ></Label>
+
+                        <TextBox x:Name="txtAge"  VerticalContentAlignment="Bottom"  Padding="5,0,0,0"></TextBox>
+
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Margin="94,10,0,0">
+                        <Label Content="Gender" ></Label>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+                            <RadioButton Content="Male"  Tag="male" x:Name="male" > </RadioButton>
+                            <RadioButton Content="Female" Margin="20,0,0,0" x:Name="female" ></RadioButton>
+
+                        </StackPanel>
+
+                    </StackPanel>
+                    <StackPanel Grid.Row="4"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                        <Label Content="E-MAIL" ></Label>
+
+                        <TextBox x:Name="txtMail"  VerticalContentAlignment="Bottom"  Padding="5,0,0,0"></TextBox>
+
+                    </StackPanel>
+                    <StackPanel Grid.Row="5"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                        <Label Content="PH.NUMBER" Margin="0,0,0,0" HorizontalAlignment="Left" ></Label>
+
+                        <TextBox x:Name="txtnum"  VerticalContentAlignment="Bottom" Padding="5,0,0,0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="6"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                        <Label Content="Country" Margin="0,0,0,0" HorizontalAlignment="Left" ></Label>
+                        <TextBox x:Name="txtCountry" VerticalContentAlignment="Bottom"  Padding="5,0,0,0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="7"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                        <Label Content="Designation" Margin="0,0,0,0" HorizontalAlignment="Left"></Label>
+                        <TextBox x:Name="txtDes"  VerticalContentAlignment="Bottom" Padding="5,0,0,0"></TextBox>
+                    </StackPanel>
+
+                    <Button Content="SUBMIT"  Grid.Row="8" Grid.Column="0"  Margin="0,40,0,0" Grid.ColumnSpan="2"  Background="#3adc90" Width="130" Height="30"  Foreground="White" Click="Button_Click"  ></Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#764fba" Offset="0.1"></GradientStop>
+                <GradientStop Color="#5486cb"  Offset="1.0"></GradientStop>
+            </LinearGradientBrush>
+            </Grid.Background>
+            <Grid  Width="550" Height="700">
+           
+                    <Grid.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.3"></SolidColorBrush>
+                    </Grid.Background>
+                    
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,20,0,0">
+                    <StackPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="FontSize" Value="17"></Setter>
+                            <Setter Property="FontWeight" Value="Medium"></Setter>
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                            <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                <Button  Width="120" Height="75" Margin="0,0,0,0" Click="Button_Click_1" FontSize="18" FontWeight="Medium" Background="Transparent" BorderThickness="0">
+                    <Image Source="C:\Users\nikilesh\Downloads\fast-backward.png"></Image>
+                </Button>
+                    <StackPanel VerticalAlignment="Center" Margin="80,0,0,0">
+                        <Label Content="INFORMATION"  FontSize="28"  ></Label>
+                    </StackPanel>
+               
+                <Button Width="120" Height="75" Margin="30,0,0,0" Click="Button_Click_2"  >
+                    <Image Source="C:\Users\nikilesh\Downloads\fast-forward.png" ></Image>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="Name" ></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtname" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  VerticalContentAlignment="Center"></TextBox>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+
+                <Label Content="Age"  FontSize="18" FontWeight="Medium"></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtAgeN"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0" Grid.Row="2"  VerticalContentAlignment="Center"></TextBox>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="Gender" ></Label>
+            </StackPanel>
+            <TextBox  x:Name="txtGender"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  Grid.Row="3" VerticalContentAlignment="Center"></TextBox>
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="E-mail"  ></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtmail"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  Grid.Row="4" VerticalContentAlignment="Center"></TextBox>
+
+            <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="Phone Number"  ></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtphoneN"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  Grid.Row="5"  VerticalContentAlignment="Center"></TextBox>
+            <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="Country"  ></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtCountryN"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  Grid.Row="6" VerticalContentAlignment="Center"></TextBox>
+
+            <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,40,70,0">
+                <Label Content="Designation"  ></Label>
+            </StackPanel>
+            <TextBox   x:Name="txtDesN"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,40,0,0"  Grid.Row="7"  VerticalContentAlignment="Center"></TextBox>
+                <Button Content="GET INFO"  Grid.Row="8" Grid.Column="0"  Margin="0,40,0,0" Grid.ColumnSpan="2"  Background="#3adc90" Width="130" Height="30"  Foreground="White" Click="Button_Click_3" ></Button>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
